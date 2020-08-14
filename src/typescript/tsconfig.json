@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "noImplicitAny": false,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "outDir": "/build/",
+        "sourceMap": false,
+        "allowJs": true,
+        //"noEmit": true
+    },
+    "include": [
+        "class/**/*"
+    ],
+    "exclude": [
+        "dist",
+        "build",
+        "node_modules",
+        "**/*.spec.ts",
+    ]
+}
