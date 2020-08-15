@@ -14,11 +14,20 @@ class VoiceCommander {
     this.grammarData = [];
     this.queryType = '';
 
-    if (typeof options !== 'undefined') {
+    if (typeof options !== 'undefined' &&
+        typeof options.grammarData !== 'undefined') {
 
       this.grammarData = options.grammarData
 
     }
+
+    if (typeof options !== 'undefined' &&
+        typeof options.callback !== 'undefined') {
+
+      this.callback = options.callback
+
+    }
+
 
     this.grammar = '#JSGF V1.0; grammar grammarData; public <color> = ' + this.grammarData.join(' | ') + ' ;'
     this.recognition = new SpeechRecognition()
@@ -58,8 +67,12 @@ class VoiceCommander {
       // These also have getters so they can be accessed like arrays.
       // The second [0] returns the SpeechRecognitionAlternative at position 0.
       // We then return the transcript property of the SpeechRecognitionAlternative object
-      const color = event.results[0][0].transcript
-      this.diagnostic = 'VoiceCommander => Result => ' + color + '.'
+      const r = event.results[0][0].transcript
+      this.diagnostic = 'VoiceCommander => Result => ' + r + '.'
+
+      if (typeof this.callback !== 'undefined') {
+        this.callback(r)
+      }
       // bg.style.backgroundColor = color;
       console.log('Confidence => ' + event.results[0][0].confidence)
       console.log('Diagnostic => ' + this.diagnostic)
