@@ -5,7 +5,7 @@
 
 var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
 var SpeechGrammarList = window.SpeechGrammarList || window.webkitSpeechGrammarList
-var SpeechRecognitionEvent = window.SpeechRecognitionEvent || window.webkitSpeechRecognitionEvent
+// var SpeechRecognitionEvent = window.SpeechRecognitionEvent || window.webkitSpeechRecognitionEvent
 
 class VoiceCommander {
 
