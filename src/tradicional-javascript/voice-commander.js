@@ -85,8 +85,13 @@ function VoiceCommander(options) {
 
   this.run = function() {
 
-    this.recognition.start()
-    console.log('VoiceCommander => Ready to receive voice command.')
+    try {
+      this.recognition.start()
+    } catch(err) {
+      console.log(err)
+    } finally {
+      console.log('VoiceCommander => Ready to receive voice command.')
+    }
 
   }
 

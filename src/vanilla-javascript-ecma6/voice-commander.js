@@ -104,8 +104,14 @@ class VoiceCommander {
 
   run () {
 
-    this.recognition.start()
-    console.log('VoiceCommander => Ready to receive voice command.')
+    // Better than flag
+    try {
+      this.recognition.start()
+    } catch(err) {
+      console.log(err)
+    } finally {
+      console.log('VoiceCommander => Ready to receive voice command.')
+    }
 
   }
 

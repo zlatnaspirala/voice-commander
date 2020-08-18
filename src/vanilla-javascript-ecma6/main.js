@@ -19,5 +19,6 @@ const options = {
 const VoiceCommanderInstance = new VoiceCommander(options)
 
 console.log(VoiceCommanderInstance)
+window.vc = VoiceCommanderInstance;
 
 VoiceCommanderInstance.run()
