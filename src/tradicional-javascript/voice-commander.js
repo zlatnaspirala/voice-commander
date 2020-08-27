@@ -1,5 +1,5 @@
 /**
- * Vanilla JavaScript ECMA6 variant of VoiceCommander
+ * Vanilla JavaScript variant of VoiceCommander
  * class model.
  */
 
@@ -7,6 +7,12 @@ var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecogniti
 var SpeechGrammarList = window.SpeechGrammarList || window.webkitSpeechGrammarList
 var SpeechRecognitionEvent = window.SpeechRecognitionEvent || window.webkitSpeechRecognitionEvent
 
+/**
+ *  This is class 
+ *  Usage: var something = new VoiceCommander()
+ *  this.foo is property of class 
+ *  var foo = 0;  is local variable but global for class (only inside)
+ */
 function VoiceCommander(options) {
 
   this.grammarData = [];
