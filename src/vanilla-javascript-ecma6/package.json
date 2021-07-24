@@ -1,0 +1,34 @@
+{
+  "name": "voice-commander",
+  "short-name": "voice-commander",
+  "version": "0.0.1",
+  "description": "Base version, test npm implementation",
+  "main": "main.js",
+  "scripts": {
+    "build": "browserify main.js -p esmify > build/voice-commander.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zlatnaspirala/voice-commander.git"
+  },
+  "keywords": [
+    "voice-detect",
+    "js",
+    "voice-commander",
+    "commander",
+    "javascript",
+    "ECMA6"
+  ],
+  "author": "Nikola Lukic zlatnaspirala@gmail.com",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/zlatnaspirala/voice-commander/issues"
+  },
+  "homepage": "https://github.com/zlatnaspirala/voice-commander#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-resolve": "^2.0.0",
+    "esmify": "^2.1.1"
+  }
+}
