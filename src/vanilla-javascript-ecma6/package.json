@@ -1,8 +1,8 @@
 {
   "name": "voice-commander",
   "short-name": "voice-commander",
-  "version": "0.0.1",
-  "description": "Base version, test npm implementation",
+  "version": "0.0.4",
+  "description": "Base version, fixed import and readme",
   "main": "index.js",
   "scripts": {
     "build": "browserify main.js -p esmify > build/voice-commander.js",

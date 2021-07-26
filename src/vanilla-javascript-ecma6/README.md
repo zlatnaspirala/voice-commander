@@ -4,17 +4,19 @@
 
 ## Install
 ```js
-  npm i voice-commander
+  npm i voice-commander --save
 ```
 
 ## Usage
 ```js
-import { VoiceCommander } from './voice-commander.js'
-import { colorNamesGrammars } from './grammar-set/colors.js'
+import { VoiceCommander, colorNamesGrammars } from 'voice-commander'
 
 const options = {
   grammarData: colorNamesGrammars,
   callback: (r) => {
+    if (r == "test") {
+      alert("Test what ;) ?")
+    }
     console.log(r);
   }
 }
